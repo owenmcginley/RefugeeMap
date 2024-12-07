@@ -87,8 +87,6 @@ server <- function(input, output, session) {
     
     # Make leaflet map using combined data
     map <- leaflet(world_map_sp)|>
-      addProviderTiles(providers$Stadia.StamenTonerLite,
-                       options = providerTileOptions(noWrap = TRUE))|>
       setView(0, 0, 2)|>
       addPolygons(
         fillColor = pal(world_map_sp$refugees),
